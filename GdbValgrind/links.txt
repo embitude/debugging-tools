@@ -1,0 +1,2 @@
+https://www.redhat.com/en/blog/valgrind-and-gdb-close-cooperation
+https://developers.redhat.com/articles/2021/11/01/debug-memory-errors-valgrind-and-gdb#scan_for_memory_leaks
