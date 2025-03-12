@@ -1,0 +1,8 @@
+probe kernel.function("*@net/ipv4/ip_input.c")
+{
+    printf ("ip_input-> time=%u funcion = %s\n", gettimeofday_s(), probefunc());
+}
+probe timer.ms(10000)
+{
+    exit()
+}

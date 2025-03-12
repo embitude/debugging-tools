@@ -1,0 +1,8 @@
+probe kernel.function("ip_rcv")
+{
+    printf ("packet rcvd %s\n",$$parms);
+}
+probe timer.ms(4000)
+{
+    exit()
+}

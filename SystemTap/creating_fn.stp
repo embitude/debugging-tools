@@ -1,0 +1,8 @@
+function myfunc(){
+    printf("my function\n");
+}
+probe begin
+{
+    myfunc();
+    printf ("hello world\n");
+}

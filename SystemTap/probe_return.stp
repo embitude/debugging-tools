@@ -1,0 +1,4 @@
+probe syscall.mkdir.return
+{
+    printf ("mkdir() %s\n",$$return);
+}

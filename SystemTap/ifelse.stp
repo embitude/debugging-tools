@@ -1,0 +1,14 @@
+global counter
+probe kernel.function("*@net/ipv4/ip_input.c")
+{
+    if (probefunc() == "ip_rcv")
+    counter++;
+}
+probe timer.s(5)
+{
+    exit();
+}
+probe end
+{
+    printf ("ip_rcv() has been called %d times\n", counter);
+}
